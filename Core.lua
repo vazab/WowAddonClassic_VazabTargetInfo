@@ -1,4 +1,5 @@
 -- Setup to wrap our stuff in a table so we don't pollute the global environment
+
 local GV = _GV or getfenv(0)
 local Core = GV.Core or {}
 _GV.Core = Core
@@ -24,11 +25,13 @@ local function OnAddonLoaded()
     EventsFrame:RegisterEvent("UNIT_DAMAGE")
     EventsFrame:RegisterEvent("UNIT_RESISTANCES")
 
-    GV.Fns.InitDB()
-    GV.ChatCmd.InitSlashCommand()
-    GV.Fns.DrawMainFrame()
-    GV.Fns.SetTargetStats()
-    GV.Fns.RefreshMainFrame()
+    if (GV.Fns.CheckVars() == false) then
+        GV.Fns.InitDB()
+        GV.ChatCmd.InitSlashCommand()
+        GV.Fns.DrawMainFrame()
+        GV.Fns.SetTargetStats()
+        GV.Fns.RefreshMainFrame()
+    end
 end
 
 local function OnPlayerLogin()

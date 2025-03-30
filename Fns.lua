@@ -35,6 +35,16 @@ local MainFrame
 local TargetStatsText
 local TargetRangeText
 
+function Fns.CheckVars()
+    if (not MainFrame)
+    or (not TargetFrame) 
+    or (not TargetRangeText) then
+        return false
+    else
+        return true
+    end
+end
+
 -- ****************
 -- Functions common
 -- ****************
