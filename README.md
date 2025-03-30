@@ -1,3 +1,5 @@
+v0.4
+
 Rename folder to [VazabTargetInfo] without square brackets.
 There should be no folders inside the folder, only files.
 
