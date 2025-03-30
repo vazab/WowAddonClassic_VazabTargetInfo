@@ -1,0 +1,12 @@
+## Interface: 11200
+## Title: VazabTargetInfo v0.4
+## Notes: Show some target info
+## Author: Vazab
+## Version: 0.4
+## SavedVariables: VazabTargetInfoDB
+
+GlobalEnv.lua
+Utils.lua
+Fns.lua
+ChatCmd.lua
+Core.lua
