@@ -70,11 +70,11 @@ end
 -- ****************
 
 local function Init()
-    if (not event) then
-        GV.Utils.SayD("event: nill")
-    else
-        GV.Utils.SayD("event: "..event)
-    end
+    --if (not event) then
+        --GV.Utils.SayD("event: nill")
+    --else
+        --GV.Utils.SayD("event: "..event)
+    --end
 
     if (event == "ADDON_LOADED") then OnAddonLoaded() end
     if (event == "PLAYER_LOGIN") then OnPlayerLogin() end

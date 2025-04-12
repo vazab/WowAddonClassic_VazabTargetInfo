@@ -8,7 +8,7 @@ _GV.ChatCmd = ChatCmd
 
 local function HandleSlashCommand(cmd)
     if (cmd == nil or cmd == "") then -- Commands list
-        GV.Utils.Say("\nzab show\nzab hide\nzab reset\nzab scale 1\nzab alpha 0.5\nzab pos\nzab pos 0 0\nzab range 0\nzab bg 1\nzab ppos 529 -500\nzab tpos 756 -500\nbest ppos 465 -500\nbest tpos 820 -500")
+        GV.Utils.Say("\nzab show | zab hide | zab reset\nzab scale 1 | zab alpha 0.5 | zab bg 1\nzab pos | zab pos 0 0\nzab range 0\nzab ppos 529 -500 | zab tpos 756 -500 | zab ptpos")
         return
     end
     
@@ -121,6 +121,9 @@ local function HandleSlashCommand(cmd)
         end
 
         GV.Fns.MovePlateTarget(arg2, arg3)
+    elseif args[1] == "ptpos" then
+        GV.Fns.MovePlatePlayer(465, -500)
+        GV.Fns.MovePlateTarget(820, -500)
     elseif args[1] == "test" then
         GV.Utils.SayD("TestStart")
         GV.Utils.SayD("TestEnd")

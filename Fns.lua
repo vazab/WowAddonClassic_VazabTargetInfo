@@ -241,7 +241,7 @@ local function GetSpellRange()
     else report = report..""
     end
 
-    if (report == "") then report = "OOR" end
+    if (report == "") then report = "OoR" end
     
     return report
 end
@@ -250,7 +250,8 @@ function Fns.PrintSpellRange()
     if (VazabTargetInfoDB.SpellRange == 1) then
         local finalTextSpellRange = ""
 
-        if (not UnitIsFriend("player", "target")) then
+        if (not UnitIsFriend("player", "target"))
+        and (UnitExists("target")) then
             finalTextSpellRange = GetSpellRange()
         end
         
